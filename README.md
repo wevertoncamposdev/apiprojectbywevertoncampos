@@ -2,14 +2,20 @@
 
 ## Introdução
 
-para iniciar a aplicação execute os seguintes comandos.
+Para iniciar a aplicação execute os seguintes comandos.
 
 ```
-cd laradock
+cd laradock 
 docker-compose up -d nginx mysql phpmyadmin
 docker-compose exec workspace bash 
+
+```
+
+Para criar o banco de dados e popular com registros para testes
+
+```
 php artisan migrate --seed
-yes
+yes 
 
 ```
 
