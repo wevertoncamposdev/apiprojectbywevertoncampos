@@ -54,9 +54,7 @@ font: https://laravel.com/docs/9.x/migrations#column-method-softDeletesTz
 
 
 
-
-
-### route http://localhost/api/cities
+## Route http://localhost/api/cities
 
 Criar/Listar/Editar/Excluir uma nova cidade
 #### Visão Geral
@@ -70,6 +68,73 @@ Ao criar uma cidade ela recebe um uuid que será um parâmetro para criar os gru
 
   Exemplo de rota com uuid:
   http://localhost/api/cities/8379fb45-d3da-4145-a38e-15badae5541a
+
+```
+
+## Route http://localhost/api/products
+
+Criar/Listar/Editar/Excluir uma nova cidade
+#### Visão Geral
+Ao criar uma cidade ela recebe um uuid que será um parâmetro para criar os grupos de cidade ou para listar, atualizar e excluir uma cidade.
+```
+  GET|HEAD        api/products ....................................................................... products.index › Api\ProductController@index  
+  POST            api/products ....................................................................... products.store › Api\ProductController@store  
+  GET|HEAD        api/products/{product} ............................................................... products.show › Api\ProductController@show  
+  PUT|PATCH       api/products/{product} ........................................................... products.update › Api\ProductController@update  
+  DELETE          api/products/{product} ......................................................... products.destroy › Api\ProductController@destroy  
+
+  Exemplo de rota com uuid:
+  http://localhost/api/products/8379fb45-d3da-4145-a38e-15badae5541a
+
+```
+
+## Route http://localhost/api/groups
+
+Criar/Listar/Editar/Excluir uma nova cidade
+#### Visão Geral
+Ao criar uma cidade ela recebe um uuid que será um parâmetro para criar os grupos de cidade ou para listar, atualizar e excluir uma cidade.
+```
+  GET|HEAD        api/groups ............................................................................. groups.index › Api\GroupController@index  
+  POST            api/groups ............................................................................. groups.store › Api\GroupController@store  
+  GET|HEAD        api/groups/{group} ....................................................................... groups.show › Api\GroupController@show  
+  PUT|PATCH       api/groups/{group} ................................................................... groups.update › Api\GroupController@update  
+  DELETE          api/groups/{group} ................................................................. groups.destroy › Api\GroupController@destroy 
+
+  Exemplo de rota com uuid:
+  http://localhost/api/groups/8379fb45-d3da-4145-a38e-15badae5541a
+
+```
+
+## Route http://localhost/api/campaigns
+
+Criar/Listar/Editar/Excluir uma nova cidade
+#### Visão Geral
+Ao criar uma cidade ela recebe um uuid que será um parâmetro para criar os grupos de cidade ou para listar, atualizar e excluir uma cidade.
+```
+  GET|HEAD        api/campaigns .................................................................... campaigns.index › Api\CampaignController@index  
+  POST            api/campaigns .................................................................... campaigns.store › Api\CampaignController@store  
+  GET|HEAD        api/campaigns/{campaign} ........................................................... campaigns.show › Api\CampaignController@show  
+  PUT|PATCH       api/campaigns/{campaign} ....................................................... campaigns.update › Api\CampaignController@update  
+  DELETE          api/campaigns/{campaign} ..................................................... campaigns.destroy › Api\CampaignController@destroy  
+  Exemplo de rota com uuid:
+  http://localhost/api/campaigns/8379fb45-d3da-4145-a38e-15badae5541a
+
+```
+
+## Route http://localhost/api/trash
+
+Criar/Listar/Editar/Excluir uma nova cidade
+#### Visão Geral
+Ao criar uma cidade ela recebe um uuid que será um parâmetro para criar os grupos de cidade ou para listar, atualizar e excluir uma cidade.
+```
+  GET|HEAD        api/trash ............................................................................... trash.index › Api\TrashController@index  
+  GET|HEAD        api/trash/{trash} ......................................................................... trash.show › Api\TrashController@show
+  GET|HEAD        api/trash/{trash} ......................................................................... trash.show › Api\TrashController@show  
+  PUT|PATCH       api/trash/{trash} ..................................................................... trash.update › Api\TrashController@update  
+  DELETE          api/trash/{trash} ................................................................... trash.destroy › Api\TrashController@destroy 
+
+  Exemplo de rota com uuid:
+  http://localhost/api/trash?table=cities
 
 ```
 
