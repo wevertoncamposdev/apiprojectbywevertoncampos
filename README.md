@@ -91,6 +91,24 @@ Ao criar uma campanha é necessário enviar o uuid do produto e os descontos de 
 
 ```
 
+## Route http://localhost/api/campaigns
+
+Criar/Listar/Editar/Excluir uma nova campanha
+
+#### Visão Geral
+Ao criar uma campanha é possível adicionar os produtos com seus respectivos descontos. Ao atualizar uma campanha é possível atualizar os produtos existentes ou adicionar mais produtos . Para remover o produto da campanha acesse a rota de produto
+
+```
+  GET|HEAD        api/campaigns .................................................................... campaigns.index › Api\CampaignController@index  
+  POST            api/campaigns .................................................................... campaigns.store › Api\CampaignController@store  
+  GET|HEAD        api/campaigns/{campaign} ........................................................... campaigns.show › Api\CampaignController@show  
+  PUT|PATCH       api/campaigns/{campaign} ....................................................... campaigns.update › Api\CampaignController@update  
+  DELETE          api/campaigns/{campaign} ..................................................... campaigns.destroy › Api\CampaignController@destroy  
+  Exemplo de rota com uuid:
+  http://localhost/api/campaigns/8379fb45-d3da-4145-a38e-15badae5541a
+
+```
+
 ## Route http://localhost/api/groups
 
 Criar/Listar/Editar/Excluir um novo grupo de cidades
@@ -110,24 +128,6 @@ Esta rota retorna todos os dados de cada groupo, informando as cidades que perte
 
   Exemplo de rota com uuid:
   http://localhost/api/groups/8379fb45-d3da-4145-a38e-15badae5541a
-
-```
-
-## Route http://localhost/api/campaigns
-
-Criar/Listar/Editar/Excluir uma nova campanha
-
-#### Visão Geral
-Ao criar uma campanha é possível adicionar os produtos com seus respectivos descontos. Ao atualizar uma campanha é possível atualizar os produtos existentes ou adicionar mais produtos . Para remover o produto da campanha acesse a rota de produto
-
-```
-  GET|HEAD        api/campaigns .................................................................... campaigns.index › Api\CampaignController@index  
-  POST            api/campaigns .................................................................... campaigns.store › Api\CampaignController@store  
-  GET|HEAD        api/campaigns/{campaign} ........................................................... campaigns.show › Api\CampaignController@show  
-  PUT|PATCH       api/campaigns/{campaign} ....................................................... campaigns.update › Api\CampaignController@update  
-  DELETE          api/campaigns/{campaign} ..................................................... campaigns.destroy › Api\CampaignController@destroy  
-  Exemplo de rota com uuid:
-  http://localhost/api/campaigns/8379fb45-d3da-4145-a38e-15badae5541a
 
 ```
 
