@@ -73,9 +73,12 @@ Ao criar uma cidade ela recebe um uuid que será um parâmetro para criar os gru
 
 ## Route http://localhost/api/products
 
-Criar/Listar/Editar/Excluir uma nova cidade
+Criar/Listar/Editar/Excluir um produto
 #### Visão Geral
-Ao criar uma cidade ela recebe um uuid que será um parâmetro para criar os grupos de cidade ou para listar, atualizar e excluir uma cidade.
+Ao criar um produto ele recebe um uuid que servirá de parâmetro para criar as campanhas de descontos.
+Ao criar uma campanha é necessário enviar o uuid do produto e os descontos de cada produto.
+
+
 ```
   GET|HEAD        api/products ....................................................................... products.index › Api\ProductController@index  
   POST            api/products ....................................................................... products.store › Api\ProductController@store  
@@ -90,9 +93,14 @@ Ao criar uma cidade ela recebe um uuid que será um parâmetro para criar os gru
 
 ## Route http://localhost/api/groups
 
-Criar/Listar/Editar/Excluir uma nova cidade
+Criar/Listar/Editar/Excluir um novo grupo de cidades
+
 #### Visão Geral
-Ao criar uma cidade ela recebe um uuid que será um parâmetro para criar os grupos de cidade ou para listar, atualizar e excluir uma cidade.
+Ao criar um grupo de cidades é possível inserir uma campanha e as cidades pertencentes a este grupo.
+A campanha já retorna os dados de produtos e descontos registrados na campanha.
+Esta retorna em si retorna todos os dados de cada groupo informando os dados do grupo, as cidades que pertencem a este grupo, as campanhas ativa e os produtos e descontos desta campanha.
+
+
 ```
   GET|HEAD        api/groups ............................................................................. groups.index › Api\GroupController@index  
   POST            api/groups ............................................................................. groups.store › Api\GroupController@store  
@@ -107,9 +115,11 @@ Ao criar uma cidade ela recebe um uuid que será um parâmetro para criar os gru
 
 ## Route http://localhost/api/campaigns
 
-Criar/Listar/Editar/Excluir uma nova cidade
+Criar/Listar/Editar/Excluir uma nova campanha
+
 #### Visão Geral
-Ao criar uma cidade ela recebe um uuid que será um parâmetro para criar os grupos de cidade ou para listar, atualizar e excluir uma cidade.
+Ao criar uma campanha é possível adicionar os produtos com seus respectivos descontos. Ao atualizar uma campanha é possível atualizar os produtos existentes ou adicionar mais produtos . Para remover o produto da campanha acesse a rota de produto
+
 ```
   GET|HEAD        api/campaigns .................................................................... campaigns.index › Api\CampaignController@index  
   POST            api/campaigns .................................................................... campaigns.store › Api\CampaignController@store  
