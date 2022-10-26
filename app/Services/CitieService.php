@@ -4,6 +4,7 @@ namespace App\Services;
 
 use Illuminate\Support\Facades\DB;
 use App\Models\Citie as Model;
+use App\Models\Group;
 
 use Exception;
 
@@ -61,12 +62,16 @@ class CitieService
     }
 
     public function update($request,$uuid)
-    {
+    {   
+        $group = Group::whereUuid($request->group_uuid)->first();
         try {
             DB::beginTransaction();
-            $this->data->whereUuid($uuid)->update($request);
+            $this->data->whereUuid($uuid)->update([
+                'name'=> $request->name,
+                'group_id'=> $group->id
+            ]);
             DB::commit();
-            return $this->data->where( $uuid)->get();
+            return $this->data->whereUuid($uuid)->get();
         } catch (Exception $e) {
             DB::rollBack();
             return $e->getMessage();

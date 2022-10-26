@@ -73,8 +73,13 @@ font: https://laravel.com/docs/9.x/migrations#column-method-softDeletesTz
 ## Route http://localhost/api/cities
 
 Criar/Listar/Editar/Excluir uma nova cidade
+
 #### Visão Geral
 Ao criar uma cidade ela recebe um uuid que será um parâmetro para criar os grupos de cidade ou para listar, atualizar e excluir uma cidade.
+
+Ao atualiza uma cidade é possível alterar o grupo.
+
+
 ```
   GET|HEAD        api/cities ............................................................................. cities.index › Api\CitieController@index  
   POST            api/cities ............................................................................. cities.store › Api\CitieController@store  

@@ -51,7 +51,7 @@ class CitieController extends Controller
      */
     public function update(Request $request, Service $data, $uuid)
     {
-        return $data->update($request->all(), $uuid);
+        return $data->update($request, $uuid);
     }
 
     /**
