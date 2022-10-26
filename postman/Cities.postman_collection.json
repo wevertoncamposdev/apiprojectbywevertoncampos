@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "40eb63e2-c775-4092-ab16-036bc579e718",
+		"name": "Cities",
+		"description": "# Introdução\n\nCriar/Listar/Editar/Excluir uma nova cidade\n\n# Visão Geral\n\n`Ao criar uma cidade ela recebe um uuid que será uma parâmetro para criar os grupos de cidade.`",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15792016"
+	},
+	"item": [
+		{
+			"name": "Show All Cities",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost/api/cities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"cities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Only City",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Ribeirão Preto",
+							"type": "text"
+						},
+						{
+							"key": "group_id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/api/cities/8379fb45-d3da-4145-a38e-15badae5541a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"cities",
+						"8379fb45-d3da-4145-a38e-15badae5541a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create City",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Cidade 1",
+							"description": "Name of the city",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/api/cities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"cities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update City",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Cidade 1",
+							"description": "Name of the city",
+							"type": "text"
+						},
+						{
+							"key": "group_id",
+							"value": "2",
+							"description": "Group ID",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/api/cities/8379fb45-d3da-4145-a38e-15badae5541a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"cities",
+						"8379fb45-d3da-4145-a38e-15badae5541a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete City",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost/api/cities/8379fb45-d3da-4145-a38e-15badae5541a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"cities",
+						"8379fb45-d3da-4145-a38e-15badae5541a"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

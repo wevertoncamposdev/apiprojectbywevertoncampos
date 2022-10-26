@@ -1,0 +1,37 @@
+{
+	"info": {
+		"_postman_id": "fb9c11ae-c6c7-49c2-bcbc-c2c23c131f80",
+		"name": "Trash",
+		"description": "# Visão Geral\n\n`Ao deletar qualquer registro ele não será excluído do banco de dados, será arquivado e por meio desta rota é possível lista os registros arquivados`",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15792016"
+	},
+	"item": [
+		{
+			"name": "Show All Deleted Records",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/trash?table=cities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"trash"
+					],
+					"query": [
+						{
+							"key": "table",
+							"value": "cities",
+							"description": "get all records destroyed"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

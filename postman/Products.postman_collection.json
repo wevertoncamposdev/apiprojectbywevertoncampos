@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "2313c7b3-6329-43f1-9635-2099cfe88f29",
+		"name": "Products",
+		"description": "# Introdução\n\nCriar/Listar/Editar/Excluir um produto\n\n# Visão Geral\n\n`Ao criar um produto ele recebe um uuid que servirá de parâmetro para criar as campanhas de descontos.`\n\n> Ao criar uma campanha é necessário enviar o uuid do produto e os descontos de cada produto.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15792016"
+	},
+	"item": [
+		{
+			"name": "Show All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Only Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Produto 2",
+							"description": "Product's name",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Descrição do produto 2",
+							"description": "Product description",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "80",
+							"description": "Price of the product",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Produto 2",
+							"description": "Product's name",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Descrição do produto 2 atualizado",
+							"description": "Product description",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "70",
+							"description": "Price of the product",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/api/products/7c5d6233-fb83-40c5-9ccc-08b307a16a64",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"products",
+						"7c5d6233-fb83-40c5-9ccc-08b307a16a64"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/products/7c5d6233-fb83-40c5-9ccc-08b307a16a64",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"products",
+						"7c5d6233-fb83-40c5-9ccc-08b307a16a64"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

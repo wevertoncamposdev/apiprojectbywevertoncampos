@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "9b56711e-da92-4791-974e-db77c2f4a4c9",
+		"name": "Campaign",
+		"description": "# Introdução\n\nCriar/Listar/Editar/Excluir uma nova campanha\n\n# Visão Geral\n\n`Ao criar uma campanha é possível adicionar os produtos com seus respectivos descontos. Ao atualizar uma campanha é possível atualizar os produtos existentes ou adicionar mais produtos . Para remover o produto da campanha acesse a rota de produto`",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15792016"
+	},
+	"item": [
+		{
+			"name": "Show All Campaigns",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/campaigns",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"campaigns"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Only Campaign",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/campaigns/uuid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"campaigns",
+						"uuid"
+					]
+				},
+				"description": "`uuid = 800cf23e-24de-40c7-bd14-573fd48084c8`"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Campaign",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Nome da Campanha",
+							"description": "Campaign Name",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Descrição da campanha",
+							"description": "Campaign Description",
+							"type": "text"
+						},
+						{
+							"key": "products[0][uuid]",
+							"value": "ef949e20-8deb-47d0-b996-25e225e379e2",
+							"description": "UUID of product",
+							"type": "text"
+						},
+						{
+							"key": "products[0][product_discount]",
+							"value": "10",
+							"description": "Dicount of product",
+							"type": "text"
+						},
+						{
+							"key": "products[1][uuid]",
+							"value": "7a5f3b96-8d79-4d07-a89c-dc2e08655e20",
+							"description": "UUID of product",
+							"type": "text"
+						},
+						{
+							"key": "products[1][product_discount]",
+							"value": "15",
+							"description": "Dicount of product",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/api/campaigns",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"campaigns"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Campaign",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Nome da Campanha",
+							"description": "Campaign Name",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Descrição da campanha ",
+							"description": "Campaign Description",
+							"type": "text"
+						},
+						{
+							"key": "products[0][uuid]",
+							"value": "3b52c0fe-ea64-4078-b33d-37d963fe3fdd",
+							"description": "UUID of product",
+							"type": "text"
+						},
+						{
+							"key": "products[0][product_discount]",
+							"value": "10",
+							"description": "Dicount of product",
+							"type": "text"
+						},
+						{
+							"key": "products[1][uuid]",
+							"value": "edb3a448-3a77-4644-894e-9521921f0406",
+							"description": "UUID of product",
+							"type": "text"
+						},
+						{
+							"key": "products[1][product_discount]",
+							"value": "20",
+							"description": "Dicount of product",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/api/campaigns/uuid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"campaigns",
+						"uuid"
+					]
+				},
+				"description": "`uuid = f377a5ea-d58b-4b3f-9bcd-c0b996f30257`"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Campaign",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/campaigns/b0e74847-b6c6-4d43-984c-ec5070b262c8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"campaigns",
+						"b0e74847-b6c6-4d43-984c-ec5070b262c8"
+					]
+				},
+				"description": "Usando o **SoftDelete** para manter a rastreabilidade, ao deletar essa informação ele será arquivado e é possível ver o dados arquivados na rota\n\n`http://localhost/api/trash?table=campaings`\n\nEndFragment"
+			},
+			"response": []
+		}
+	]
+}

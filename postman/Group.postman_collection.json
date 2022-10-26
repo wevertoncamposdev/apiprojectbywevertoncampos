@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "79c703ff-6ff8-4543-9973-9afefc054ed2",
+		"name": "Group",
+		"description": "# Introdução\n\nCriar/Listar/Editar/Excluir um novo grupo de cidades\n\n# Visão Geral\n\n`Ao criar um grupo de cidades é possível inserir uma campanha e as cidades pertencentes a este grupo.`\n\n> A campanha já retorna os dados de produtos e descontos registrados na campanha.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15792016"
+	},
+	"item": [
+		{
+			"name": "Show All Groups",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/groups/3e8a8cb4-e3da-44fe-9ddb-739563628b4d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"groups",
+						"3e8a8cb4-e3da-44fe-9ddb-739563628b4d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Only Group",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/groups/7286bc60-6ec8-4a13-8d1f-c117b4822c6e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"groups",
+						"7286bc60-6ec8-4a13-8d1f-c117b4822c6e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Group",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Grupo 2",
+							"description": "Group's name",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Descrição do grupo",
+							"description": "Group description",
+							"type": "text"
+						},
+						{
+							"key": "campaign_uuid",
+							"value": "115a9dc0-5e0b-4c9d-b28d-a33e5e377928",
+							"description": "UUID of Campaign for the group",
+							"type": "text"
+						},
+						{
+							"key": "cities[0]",
+							"value": "3ea29ec6-a212-484a-b9b4-96124959d172",
+							"description": "UUID of Cities belonging to the group",
+							"type": "text"
+						},
+						{
+							"key": "cities[1]",
+							"value": "f5459902-a65e-4c60-b516-dd89ec237c21",
+							"type": "text"
+						},
+						{
+							"key": "cities[2]",
+							"value": "1aa6bec0-7d8c-4024-9a8f-25d14c00ace5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/api/groups",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"groups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Group",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Grupo 1",
+							"description": "Group's name",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Descrição do grupo 1 atualizado",
+							"description": "Group description",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/api/groups/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"groups",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Group",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/groups/7286bc60-6ec8-4a13-8d1f-c117b4822c6e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"groups",
+						"7286bc60-6ec8-4a13-8d1f-c117b4822c6e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
