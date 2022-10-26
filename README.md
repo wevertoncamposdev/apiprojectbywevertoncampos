@@ -43,7 +43,9 @@ A relação de **groups** e **campaign** foi realizado no modelo 1:N, visto que 
 
 A relação de **campaign** e **products** foi realizado no modelo N:N  com uma tabela pivot onde recebe o valor de desconto de cada produto pertencente a campanha, nesse modelo é possível atualizar os descontos sem alterar o valor do produto e cada produto tem seu desconto independente.
 
-De forma prática para manter a rastreabilidade dos dados foi utilizado o método softDeletes 
+De forma prática para manter a rastreabilidade dos dados foi utilizado o método softDeletes
+Para verificar os registros arquivados acesse a rota http://localhost/api/trash?table=cities passando a tabela como parametro.
+
 ```
 O softDeletesTz este método adiciona uma deleted_at TIMESTAMP coluna equivalente anulável (com fuso horário) com uma precisão opcional (total de dígitos). Esta coluna destina-se a armazenar o deleted_attimestamp necessário para a funcionalidade de "exclusão reversível" do Eloquent:
 ```
