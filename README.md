@@ -6,6 +6,8 @@ Para o desenvolvimento foi utilizado **Laravel 9**.
 
 Para o ambiente de desenvolvimento foi utilizado o **Laradock** definindo as versões mais atuais do **PHP** e **MySQL**.
 
+Para facilitar o inicio da aplicação as configurações e teste neste repositório contem os arquivos de ambienação, reforço que não é uma boa prática, porém como é um sistema de testes e não contém informações sensíveis achei melhor manter para focar nos teste da api.
+
 
 ## Iniciando a aplicação
 
