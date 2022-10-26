@@ -45,6 +45,8 @@ https://github.com/wevertoncamposdev/apiprojectbywevertoncampos/blob/main/public
 
 ### Observações Gerais
 
+>Declaro que reconheço que ainda é possível fazer algumas melhorias em alguns pontos específicos porém abaixo estou descriminando o racíocinio lógico da api.
+
 Pensando em **sergurança** foi utilizado o método **UUID** que gera um identificador único para o registro evitando passar o **ID** no frontend.
 
 De acordo com as funções definidas foi possível identificar que se trata de um sistema de campanhas de descontos para cada produto registrado na campanha que serão destinados a grupos de cidades.
