@@ -143,7 +143,7 @@ Ao criar uma cidade ela recebe um uuid que será um parâmetro para criar os gru
   PUT|PATCH       api/trash/{trash} ..................................................................... trash.update › Api\TrashController@update  
   DELETE          api/trash/{trash} ................................................................... trash.destroy › Api\TrashController@destroy 
 
-  Exemplo de rota com uuid:
+  Exemplo da rota com o parametro ?table:
   http://localhost/api/trash?table=cities
 
 ```
