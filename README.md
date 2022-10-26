@@ -1,6 +1,13 @@
 # Laravel Api RESTful
 
-## Introdução
+## Desenvolvimento
+
+Para o desenvolvimento foi utilizado **Laravel 9**.
+
+Para o ambiente de desenvolvimento foi utilizado o **Laradock** definindo as versões mais atuais do **PHP** e **MySQL**.
+
+
+## Iniciando a aplicação
 
 Para iniciar a aplicação execute os seguintes comandos.
 
@@ -30,15 +37,10 @@ Para realizar requisições de teste via Postman importe as coleções que estã
 ## Model
 https://github.com/wevertoncamposdev/apiprojectbywevertoncampos/blob/main/public/Model.svg
 
-## Descrição do desenvolvimento
-
-Para o desenvolvimento foi utilizado **Laravel 9**.
-
-Para o ambiente de desenvolvimento foi utilizado o **Laradock** definindo as versões mais atuais do **PHP** e **MySQL**.
-
-Pensando em **sergurança** foi utilizado o método **uuid** que que gera um identificador único para o registro evitando passar o id no frontend.
 
 ### Observações Gerais
+
+Pensando em **sergurança** foi utilizado o método **UUID** que gera um identificador único para o registro evitando passar o **ID** no frontend.
 
 De acordo com as funções definidas foi possível identificar que se trata de um sistema de campanhas de descontos para cada produto registrado na campanha que serão destinados a grupos de cidades.
 
