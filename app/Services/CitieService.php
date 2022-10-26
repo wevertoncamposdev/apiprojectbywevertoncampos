@@ -39,7 +39,7 @@ class CitieService
     {
         try {
 
-            $data = $this->data->where('uuid','=', $uuid)->get();
+            $data = $this->data->whereUuid($uuid)->get();
             return $data;
         } catch (Exception $ex) {
 
@@ -64,9 +64,9 @@ class CitieService
     {
         try {
             DB::beginTransaction();
-            $this->data->where('uuid','=', $uuid)->update($request);
+            $this->data->whereUuid($uuid)->update($request);
             DB::commit();
-            return $this->data->where('uuid','=', $uuid)->get();
+            return $this->data->where( $uuid)->get();
         } catch (Exception $e) {
             DB::rollBack();
             return $e->getMessage();
@@ -77,9 +77,9 @@ class CitieService
     {
         try {
             DB::beginTransaction();
-            $data = $this->data->where('uuid', '=', $uuid)->delete();
+            $data = $this->data->whereUuid($uuid)->delete();
             DB::commit();
-            return $this->data->withTrashed()->where('uuid', '=', $uuid)->get();
+            return $this->data->withTrashed()->whereUuid($uuid)->get();
         } catch (Exception $e) {
             DB::rollBack();
             return $e->getMessage();
