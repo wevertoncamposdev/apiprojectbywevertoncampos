@@ -12,9 +12,8 @@ Para o ambiente de desenvolvimento foi utilizado o **Laradock** definindo as ver
 Para iniciar a aplicação execute os seguintes comandos.
 
 ```
-git clone https://github.com/Laradock/laradock.git
+git clone https://github.com/wevertoncamposdev/laradock
 cd laradock 
-cp .env.example .env
 docker-compose up -d nginx mysql phpmyadmin
 docker-compose exec workspace bash 
 
