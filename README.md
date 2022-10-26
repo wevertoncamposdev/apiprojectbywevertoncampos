@@ -18,6 +18,8 @@ php artisan migrate --seed
 yes 
 
 ```
+Após finalizar o processo de configuração é possível acessar http://localhost
+Se for necessário é possível acessar o phpmyadmin http://localhost:8081
 
 Para realizar requisições de teste via Postman importe as coleções que estão na pasta
 
@@ -27,19 +29,7 @@ Para realizar requisições de teste via Postman importe as coleções que estã
 ```
 
 
-Comandos Docker
-Acesse a pasta laradock e inicie o docker via docker-compose
 
-cd laradock
-docker-compose up -d nginx mysql phpmyadmin
-docker-compose exec workspace bash 
-php artisan migrate --seed
-yes
-
-Após finalizar o processo é possível acessar http://localhost
-Se for necessário é possível acessar o phpmyadmin http://localhost:8081
-
-As collections do Postamn contendo as rotas e os paramentros para testes estão na pasta public/postman
 
 Definições do teste
 Linguagem de programação: PHP (Framework Laravel)
@@ -59,8 +49,10 @@ Cada cidade possui somente um grupo;
 
 Modelagem
 ver
+
 Route List
 
+```
   POST            _ignition/execute-solution .......................................................................................... ignition.executeSolution › Spatie\LaravelIgnition › ExecuteSolutionController  
   GET|HEAD        _ignition/health-check ...................................................................................................... ignition.healthCheck › Spatie\LaravelIgnition › HealthCheckController  
   POST            _ignition/update-config ................................................................................................... ignition.updateConfig › Spatie\LaravelIgnition › UpdateConfigController  
@@ -91,20 +83,4 @@ Route List
   DELETE          api/trash/{trash} ..................................................................................................................................... trash.destroy › Api\TrashController@destroy  
   GET|HEAD        sanctum/csrf-cookie ............................................................................................................. sanctum.csrf-cookie › Laravel\Sanctum › CsrfCookieController@show  
 
-  Introdução
-Criar/Listar/Editar/Excluir uma nova cidade
-
-Visão Geral
-Ao criar uma cidade ela recebe um uuid que será uma parâmetro para criar os grupos de cidade.
-
-NEXT IN THIS COLLECTION
-GET
-Show All Cities
-GET
-Show Only City
-POST
-Create City
-PUT
-Update City
-DEL
-Delete City
+```
