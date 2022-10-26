@@ -98,7 +98,7 @@ Criar/Listar/Editar/Excluir um novo grupo de cidades
 #### Visão Geral
 Ao criar um grupo de cidades é possível inserir uma campanha e as cidades pertencentes a este grupo.
 A campanha já retorna os dados de produtos e descontos registrados na campanha.
-Esta retorna em si retorna todos os dados de cada groupo informando os dados do grupo, as cidades que pertencem a este grupo, as campanhas ativa e os produtos e descontos desta campanha.
+Esta rota retorna todos os dados de cada groupo, informando as cidades que pertencem a este grupo, a campanha ativa e os produtos e descontos desta campanha.
 
 
 ```
