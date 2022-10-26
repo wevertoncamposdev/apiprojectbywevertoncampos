@@ -1,4 +1,19 @@
-Laravel api RESTful
+# Laravel Api RESTful
+
+## Introdução
+
+para iniciar a aplicação execute os seguintes comandos.
+
+```
+cd laradock
+docker-compose up -d nginx mysql phpmyadmin
+docker-compose exec workspace bash 
+php artisan migrate --seed
+yes
+
+```
+
+
 Comandos Docker
 Acesse a pasta laradock e inicie o docker via docker-compose
 
