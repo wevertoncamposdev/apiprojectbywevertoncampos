@@ -27,28 +27,17 @@ Para realizar requisições de teste via Postman importe as coleções que estã
 ./postman
 
 ```
+## Model
+https://github.com/wevertoncamposdev/apiprojectbywevertoncampos/blob/main/public/Model.svg
+
+## Descrição do desenvolvimento
 
 
 
 
-Definições do teste
-Linguagem de programação: PHP (Framework Laravel)
-Banco de dados: MySQL ou PostgreSQL
-Deverá ser criado um arquivo docker/compose onde será executado todo o teste
-Todo o código e instruções para a execução deverão estar disponível no GitHub
-Itens a serem criados
-Montar uma api RESTful com laravel para alimentar uma SPA com as seguintes funções:
 
-Cadastrar/Editar/Listar/Excluir cidades;
-Cadastrar/Editar/Listar/Excluir grupo de cidades;
-Cadastrar/Editar/Listar/Excluir campanhas para o grupo de cidades onde cada grupo possui somente uma campanha ativa;
-Cadastrar/Editar/Listar/Excluir desconto para os produtos da campanha;
-Cadastrar/Editar/Listar/Excluir produtos;
-As tabelas de relacionamento estão a cargo do candidato;
-Cada cidade possui somente um grupo;
 
-Modelagem
-ver
+
 
 Route List
 
