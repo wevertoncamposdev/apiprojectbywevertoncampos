@@ -33,7 +33,9 @@ https://github.com/wevertoncamposdev/apiprojectbywevertoncampos/blob/main/public
 ## Descrição do desenvolvimento
 
 Para o desenvolvimento foi utilizado **Laravel 9**.
-Para o ambiente de desenvolvimento foi utilizado o **Laradock** defininfo as versões mais atuais do **PHP** e **MySQL**
+
+Para o ambiente de desenvolvimento foi utilizado o **Laradock** definindo as versões mais atuais do **PHP** e **MySQL**.
+
 Pensando em **sergurança** foi utilizado o método **uuid** que que gera um identificador único para o registro evitando passar o id no frontend.
 
 ### Observações Gerais
