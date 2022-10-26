@@ -19,6 +19,13 @@ yes
 
 ```
 
+Para realizar requisições de teste via Postman importe as coleções que estão na pasta
+
+```
+./postman
+
+```
+
 
 Comandos Docker
 Acesse a pasta laradock e inicie o docker via docker-compose
