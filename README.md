@@ -45,7 +45,7 @@ https://github.com/wevertoncamposdev/apiprojectbywevertoncampos/blob/main/public
 
 ### Observações Gerais
 
->Declaro que reconheço que ainda é possível fazer algumas melhorias em alguns pontos específicos porém abaixo estou descriminando o racíocinio lógico da api.
+>Declaro que reconheço a possívebilidade de realizar algumas melhorias em alguns pontos específicos porém abaixo estou descriminando o racíocinio lógico da api e as possíbilidades analisadas.
 
 Pensando em **sergurança** foi utilizado o método **UUID** que gera um identificador único para o registro evitando passar o **ID** no frontend.
 
