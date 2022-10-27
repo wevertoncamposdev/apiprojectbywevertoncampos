@@ -117,7 +117,7 @@ Ao criar uma campanha é necessário enviar o uuid do produto e os descontos de 
 Criar/Listar/Editar/Excluir uma nova campanha
 
 #### Visão Geral
-Ao criar uma campanha é possível adicionar os produtos com seus respectivos descontos. Ao atualizar uma campanha é possível atualizar os produtos existentes ou adicionar mais produtos . Para remover o produto da campanha acesse a rota de produto
+Ao criar uma campanha é possível adicionar os produtos com seus respectivos descontos. Ao atualizar uma campanha é possível atualizar os produtos existentes ou adicionar mais produtos . Faltou realizar a função de remoção dos produtos da campanha no momento na rota **products** au excluir um produto ele será automaticamente removido da campanha.
 
 ```
   GET|HEAD        api/campaigns .................................................................... campaigns.index › Api\CampaignController@index  
@@ -156,7 +156,8 @@ Esta rota retorna todos os dados de cada groupo, informando as cidades que perte
 
 Criar/Listar/Editar/Excluir uma nova cidade
 #### Visão Geral
-Ao criar uma cidade ela recebe um uuid que será um parâmetro para criar os grupos de cidade ou para listar, atualizar e excluir uma cidade.
+Ao deletar qualquer registro ele não será excluído do banco de dados, será arquivado e por meio desta rota é possível lista os registros arquivados.
+
 ```
   GET|HEAD        api/trash ............................................................................... trash.index › Api\TrashController@index  
   GET|HEAD        api/trash/{trash} ......................................................................... trash.show › Api\TrashController@show
